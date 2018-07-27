@@ -11,6 +11,7 @@ using System.Windows.Forms;
 namespace Sistema_PANI
 {
 	public partial class Login : MetroFramework.Forms.MetroForm{
+
 		public Login()
 		{
 			InitializeComponent();
