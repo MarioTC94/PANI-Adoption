@@ -16,5 +16,10 @@ namespace Sistema_PANI
 		{
 			InitializeComponent();
 		}
-    }
+
+		private void metroTabPage4_Click(object sender, EventArgs e)
+		{
+
+		}
+	}
 }
