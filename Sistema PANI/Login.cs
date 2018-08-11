@@ -23,7 +23,6 @@ namespace Sistema_PANI
 			try
 			{
 				this.Hide();
-
 				if (new Menu().ShowDialog() == DialogResult.OK)
 				{
 					this.DialogResult = DialogResult.OK;
@@ -46,7 +45,6 @@ namespace Sistema_PANI
 			if (new Register().ShowDialog() == DialogResult.OK)
 			{
 				this.DialogResult = DialogResult.OK;
-
 			}
 
 			this.Close();

@@ -43,6 +43,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -54,6 +56,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connected Services\Address\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\Adoption\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\MaritalState\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\RoomHouse\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\StateFile\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\WorkerType\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Presenter\IMenuPresenter.cs" />
+    <Compile Include="Presenter\MenuPresenter.cs" />
+    <Compile Include="Presenter\RoomHousesServicesClient.cs" />
+    <Compile Include="View\IMenuView.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +129,87 @@
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Connected Services\Address\AddressServices.wsdl" />
+    <None Include="Connected Services\Address\AddressServices.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\Address\AddressServices1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\Address\AddressServices2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\Address\Sistema_PANI.Address.ProvinceDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Adoption\AdoptionsServices.wsdl" />
+    <None Include="Connected Services\Adoption\AdoptionsServices.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\Adoption\AdoptionsServices1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\Adoption\AdoptionsServices2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\Adoption\Sistema_PANI.Adoption.AdoptionRequestDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Adoption\Sistema_PANI.Adoption.GetAdoptionProcessResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MaritalState\MaritalStateServices.wsdl" />
+    <None Include="Connected Services\MaritalState\MaritalStateServices.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MaritalState\MaritalStateServices1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MaritalState\MaritalStateServices2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MaritalState\Sistema_PANI.MaritalState.KeyValuePairDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RoomHouse\RoomHouseServices.wsdl" />
+    <None Include="Connected Services\RoomHouse\RoomHouseServices.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\RoomHouse\RoomHouseServices1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\RoomHouse\RoomHouseServices2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\RoomHouse\Sistema_PANI.RoomHouse.KeyValuePairDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\StateFile\Sistema_PANI.StateFile.KeyValuePairDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\StateFile\StateFileServices.wsdl" />
+    <None Include="Connected Services\StateFile\StateFileServices.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\StateFile\StateFileServices1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\StateFile\StateFileServices2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WorkerType\Sistema_PANI.WorkerType.KeyValuePairDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkerType\WorkerTypeServices.wsdl" />
+    <None Include="Connected Services\WorkerType\WorkerTypeServices.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WorkerType\WorkerTypeServices1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WorkerType\WorkerTypeServices2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -109,6 +226,92 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo-full.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\Address\" />
+    <WCFMetadataStorage Include="Connected Services\Adoption\" />
+    <WCFMetadataStorage Include="Connected Services\MaritalState\" />
+    <WCFMetadataStorage Include="Connected Services\RoomHouse\" />
+    <WCFMetadataStorage Include="Connected Services\StateFile\" />
+    <WCFMetadataStorage Include="Connected Services\WorkerType\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Adoption\AdoptionsServices.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Adoption\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Adoption\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Adoption\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Address\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Address\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Address\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MaritalState\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MaritalState\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MaritalState\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\StateFile\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\StateFile\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\StateFile\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\WorkerType\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\WorkerType\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\WorkerType\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\RoomHouse\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\RoomHouse\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\RoomHouse\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
