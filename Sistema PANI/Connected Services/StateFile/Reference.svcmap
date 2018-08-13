@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0cabcf8b-70cf-4889-b8b1-0b5211c9570c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ff43a46c-a54e-4dab-b397-d7d1e5e54a50" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,10 +22,10 @@
     <MetadataSource Address="http://adoptionservice.azurewebsites.net/Contract/StateFileServices.svc?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="StateFileServices.xsd" MetadataType="Schema" ID="c519e2bb-0072-4f02-ba7e-dc0ef63e8df8" SourceId="1" SourceUrl="http://adoptionservice.azurewebsites.net/Contract/StateFileServices.svc?xsd=xsd0" />
-    <MetadataFile FileName="StateFileServices.wsdl" MetadataType="Wsdl" ID="51eeb6b8-b3cb-46f4-9092-d18fd01d9465" SourceId="1" SourceUrl="http://adoptionservice.azurewebsites.net/Contract/StateFileServices.svc?wsdl" />
-    <MetadataFile FileName="StateFileServices1.xsd" MetadataType="Schema" ID="308ed71f-2273-483a-bb1c-575448aca0d7" SourceId="1" SourceUrl="http://adoptionservice.azurewebsites.net/Contract/StateFileServices.svc?xsd=xsd1" />
-    <MetadataFile FileName="StateFileServices2.xsd" MetadataType="Schema" ID="74d76200-b399-4e8e-a6c0-5163e0ab2ef8" SourceId="1" SourceUrl="http://adoptionservice.azurewebsites.net/Contract/StateFileServices.svc?xsd=xsd2" />
+    <MetadataFile FileName="StateFileServices.xsd" MetadataType="Schema" ID="ef672420-f027-4443-b22b-eabacda9d167" SourceId="1" SourceUrl="http://adoptionservice.azurewebsites.net/Contract/StateFileServices.svc?xsd=xsd0" />
+    <MetadataFile FileName="StateFileServices.wsdl" MetadataType="Wsdl" ID="fa42c72c-82ef-43b5-ab4a-97bc83596d3a" SourceId="1" SourceUrl="http://adoptionservice.azurewebsites.net/Contract/StateFileServices.svc?wsdl" />
+    <MetadataFile FileName="StateFileServices1.xsd" MetadataType="Schema" ID="2aae8178-24d5-4a92-b6c8-fab19a0b0a44" SourceId="1" SourceUrl="http://adoptionservice.azurewebsites.net/Contract/StateFileServices.svc?xsd=xsd1" />
+    <MetadataFile FileName="StateFileServices2.xsd" MetadataType="Schema" ID="2f759db0-3148-4728-993f-89a115d78689" SourceId="1" SourceUrl="http://adoptionservice.azurewebsites.net/Contract/StateFileServices.svc?xsd=xsd2" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

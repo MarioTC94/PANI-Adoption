@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7777be50-e36f-4dc7-91d6-553d35154cae" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f3bcc3e4-1026-48d5-8cce-95384331d915" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,13 +19,13 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address=" http://adoptionservice.azurewebsites.net/Contract/AddressServices.svc?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://adoptionservice.azurewebsites.net/Contract/AddressServices.svc?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="AddressServices.xsd" MetadataType="Schema" ID="4566de23-1d97-437d-8387-524d50fd391c" SourceId="1" SourceUrl="http://adoptionservice.azurewebsites.net/Contract/AddressServices.svc?xsd=xsd1" />
-    <MetadataFile FileName="AddressServices1.xsd" MetadataType="Schema" ID="958e0b47-4fd6-4237-8d67-3bdf17a36c27" SourceId="1" SourceUrl="http://adoptionservice.azurewebsites.net/Contract/AddressServices.svc?xsd=xsd2" />
-    <MetadataFile FileName="AddressServices.wsdl" MetadataType="Wsdl" ID="6859efd6-a13d-4ad7-b9b0-47e38de0f395" SourceId="1" SourceUrl="http://adoptionservice.azurewebsites.net/Contract/AddressServices.svc?wsdl" />
-    <MetadataFile FileName="AddressServices2.xsd" MetadataType="Schema" ID="53008b8f-2bc7-448f-abbb-8430a9ce5d88" SourceId="1" SourceUrl="http://adoptionservice.azurewebsites.net/Contract/AddressServices.svc?xsd=xsd0" />
+    <MetadataFile FileName="AddressServices.xsd" MetadataType="Schema" ID="ab70a3ea-d6fc-4de0-9e4e-c61404b30b26" SourceId="1" SourceUrl="http://adoptionservice.azurewebsites.net/Contract/AddressServices.svc?xsd=xsd1" />
+    <MetadataFile FileName="AddressServices1.xsd" MetadataType="Schema" ID="f65be469-5e33-4732-933a-5afdc56346d1" SourceId="1" SourceUrl="http://adoptionservice.azurewebsites.net/Contract/AddressServices.svc?xsd=xsd2" />
+    <MetadataFile FileName="AddressServices.wsdl" MetadataType="Wsdl" ID="eeeb46db-ea46-43b2-94d9-1eb02069612e" SourceId="1" SourceUrl="http://adoptionservice.azurewebsites.net/Contract/AddressServices.svc?wsdl" />
+    <MetadataFile FileName="AddressServices2.xsd" MetadataType="Schema" ID="833a1de7-0196-4bd0-99d8-e57501343151" SourceId="1" SourceUrl="http://adoptionservice.azurewebsites.net/Contract/AddressServices.svc?xsd=xsd0" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

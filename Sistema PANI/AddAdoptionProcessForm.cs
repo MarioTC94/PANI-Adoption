@@ -7,20 +7,23 @@ using Sistema_PANI.Interfaces;
 using Sistema_PANI.Presenter;
 using System;
 using System.Collections.Generic;
-
+using System.Windows.Forms;
 
 namespace Sistema_PANI
 {
 
-	public partial class Menu : MetroForm, IMenuView
+	public partial class AddAdoptionProcessForm : MetroForm, IAddAdoptionProcessView
 	{
-		private readonly IMenuPresenter menuPresenter;
+		private readonly IAddAdoptionProccessPresenter menuPresenter;
 
-		public Menu()
+		public bool isEditMode { get; set; } = false;
+		private int IdForEdit;
+
+		public AddAdoptionProcessForm()
 		{
 			InitializeComponent();
 			this.SetDisplayAndValueMembers();
-			this.menuPresenter = new MenuPresenter(this);
+			this.menuPresenter = new AddAdoptionProccessPresenter(this);
 		}
 		public SavePersonDTO Father {
 			get {
@@ -114,15 +117,18 @@ namespace Sistema_PANI
 					Father = Father,
 					Mother = Mother,
 					MaritalStateId = (int) MaritalStateComboBox.SelectedValue,
-					RoomHouseId = (int) RoomHouseComboBox.SelectedValue
+					RoomHouseId = (int) RoomHouseComboBox.SelectedValue,
+					Address = MarriageAddress
+					
 				};
 				} set {
 				value = value ?? new SaveMarriageInformationDTO();
 					MarriageDateDateTimePicker.Value = value.MarriageDate;
 					Father = value.Father;
 					Mother = value.Mother;
-					MaritalStateComboBox.SelectedValue = value.MarriageDate;
+					MaritalStateComboBox.SelectedValue = value.MaritalStateId;
 					RoomHouseComboBox.SelectedValue = value.RoomHouseId;
+					MarriageAddress = value.Address;
 				}
 			}
 		public SaveJobInformationDTO FatherJobInformation {
@@ -141,7 +147,7 @@ namespace Sistema_PANI
 				FatherActualPositionTextBox.Text = value.ActualPosition;
 				FatherCompanyAddress.Text = value.AddressCompany;
 				FatherAnualSalaryTextBox.Text = value.AnualSalary.ToString();
-				MotherCompanyNameTextBox.Text = value.CompanyName;
+				FatherCompanyNameTextBox.Text = value.CompanyName;
 				FatherCompanyNumberTextBox.Text = value.Phone;
 				FatherWorkerType.SelectedValue = value.WorkerTypeId;				
 			}
@@ -154,7 +160,7 @@ namespace Sistema_PANI
 					AddressCompany = MotherCompanyAddress.Text,
 					AnualSalary = Decimal.Parse(MotherAnualSalaryTextBox.Text),
 					CompanyName = MotherCompanyNameTextBox.Text,
-					Phone = MotherPhoneTextBox.Text,
+					Phone = MotherCompanyPhoneTextBox.Text,
 					WorkerTypeId = (int)MotherWorkeTypeComboBox.SelectedValue
 				};
 			} set {
@@ -162,58 +168,63 @@ namespace Sistema_PANI
 				MotherActualPositionTextBox.Text = value.ActualPosition;
 				MotherCompanyAddress.Text = value.AddressCompany;
 				MotherAnualSalaryTextBox.Text = value.AnualSalary.ToString();
-				MotherPhoneTextBox.Text = value.Phone;
+				MotherCompanyPhoneTextBox.Text = value.Phone;
 				MotherCompanyNameTextBox.Text = value.CompanyName;
 				MotherWorkeTypeComboBox.SelectedValue = value.WorkerTypeId;
 
 			} }
-
-
-		//Catalogos de la cual se muestran en los ComboBox
-		public ICollection<ProvinceDTO> Provinces {
+		public SaveAddressDTO MarriageAddress { get {
+				return new SaveAddressDTO
+				{
+					CountyId = (int)CountiesComboBox.SelectedValue,
+					DistrictId = (int)DistrictsComboBox.SelectedValue,
+					ProvinceId = (int)ProvincesComboBox.SelectedValue,
+					Description = AddressDescriptionTextBox.Text
+				};
+			} set {
+				value = value ?? new SaveAddressDTO();
+				CountiesComboBox.SelectedValue = value.CountyId;
+				DistrictsComboBox.SelectedValue = value.DistrictId;
+				ProvincesComboBox.SelectedValue = value.ProvinceId;
+				AddressDescriptionTextBox.Text = value.Description;
+			} }
+		public ICollection<ProvinceDTO> ProvincesCatalog {
 			set {
 				this.ProvincesComboBox.DataSource = value;
 			}
 		}
-
-		public ICollection<CountyDTO> Counties {
+		public ICollection<CountyDTO> CountiesCatalog {
 			set {
 				this.CountiesComboBox.DataSource = value;
 			}
 		}
-
-		public ICollection<Address.KeyValuePairDTO> Districts {
+		public ICollection<Address.KeyValuePairDTO> DistrictsCatalog {
 			set {
 				this.DistrictsComboBox.DataSource = value;
 			}
 		}
-
-		public ICollection<WorkerType.KeyValuePairDTO> FatherWorkerTypes {
+		public ICollection<WorkerType.KeyValuePairDTO> FatherWorkerTypesCatalog {
 			set {
 				this.FatherWorkerType.DataSource = value;
 			}
 		}
-
-		public ICollection<WorkerType.KeyValuePairDTO> MotherWorkerTypes {
+		public ICollection<WorkerType.KeyValuePairDTO> MotherWorkerTypesCatalog {
 			set {
 				this.MotherWorkeTypeComboBox.DataSource = value;
 			}
 		}
-
-		public ICollection<RoomHouse.KeyValuePairDTO> RoomHouses {
+		public ICollection<RoomHouse.KeyValuePairDTO> RoomHousesCatalog {
 
 			set {
 				this.RoomHouseComboBox.DataSource = value;
 			}
 		}
-
-		public ICollection<MaritalState.KeyValuePairDTO> MaritalStates {
+		public ICollection<MaritalState.KeyValuePairDTO> MaritalStatesCatalog {
 			set {
 				this.MaritalStateComboBox.DataSource = value;
 			}
 		}
-
-		public ICollection<StateFile.KeyValuePairDTO> StateFiles {
+		public ICollection<StateFile.KeyValuePairDTO> StateFilesCatalog {
 			set {
 				this.StateFileCombobox.DataSource = value;
 			}
@@ -253,16 +264,41 @@ namespace Sistema_PANI
 			this.menuPresenter.HandleCountyChange(provinceId, countyId);
 		}
 
-		private void HandleSubmitAdoptionRequest(object sender, EventArgs e)
+		private async void HandleSubmitAdoptionRequest(object sender, EventArgs e)
 		{
 			try
 			{
-				this.menuPresenter.SaveAdoptionRequest();
-				MetroMessageBox.Show(this, "Saved");
+				if (this.isEditMode)
+					await this.menuPresenter.UpdateAdoptionRequest(this.IdForEdit);
+				else
+				{
+					await this.menuPresenter.SaveAdoptionRequest();
+					MetroMessageBox.Show(this, "Información guardada exitosamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, 200);
+					this.DialogResult = DialogResult.OK;
+				}
 			}
 			catch (Exception ex) {
-				MetroMessageBox.Show(this, $"Error: {ex.Message}");
+				MetroMessageBox.Show(this, "No se pudo guardar la información", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning, 200);
 			}
+		}
+
+		public void ShowToEdit(int Id)
+		{
+			menuPresenter.GetAdoptionToEdit(Id);
+			CedulaMotherTextBox.Enabled = false;
+			CedulaPadreTextBox.Enabled = false;
+
+			this.isEditMode = true;
+			this.IdForEdit = Id;
+
+			this.ChangeAdoptionProcessButton.Text = "Actualizar información";
+
+			this.Show();
+		}
+
+		public void ShowView()
+		{
+			this.ShowDialog();
 		}
 	}
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sistema_PANI.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,13 @@ namespace Sistema_PANI
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new Login());
+
+			IUserLoginView view = new Login();
+
+			var result = view.ShowViewForLogin();
+
+			if(result == DialogResult.OK)
+				Application.Run(new MenuAdoption());
 		}
 	}
 }

@@ -164,6 +164,9 @@ namespace Sistema_PANI.Adoption {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Sistema_PANI.Adoption.SaveAddressDTO AddressField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private Sistema_PANI.Adoption.SavePersonDTO FatherField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -185,6 +188,19 @@ namespace Sistema_PANI.Adoption {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Sistema_PANI.Adoption.SaveAddressDTO Address {
+            get {
+                return this.AddressField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AddressField, value) != true)) {
+                    this.AddressField = value;
+                    this.RaisePropertyChanged("Address");
+                }
             }
         }
         
@@ -249,6 +265,99 @@ namespace Sistema_PANI.Adoption {
                 if ((this.RoomHouseIdField.Equals(value) != true)) {
                     this.RoomHouseIdField = value;
                     this.RaisePropertyChanged("RoomHouseId");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SaveAddressDTO", Namespace="http://schemas.datacontract.org/2004/07/Adoption.Contract.DataContract")]
+    [System.SerializableAttribute()]
+    public partial class SaveAddressDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int CountyIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int DistrictIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ProvinceIdField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int CountyId {
+            get {
+                return this.CountyIdField;
+            }
+            set {
+                if ((this.CountyIdField.Equals(value) != true)) {
+                    this.CountyIdField = value;
+                    this.RaisePropertyChanged("CountyId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Description {
+            get {
+                return this.DescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
+                    this.DescriptionField = value;
+                    this.RaisePropertyChanged("Description");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int DistrictId {
+            get {
+                return this.DistrictIdField;
+            }
+            set {
+                if ((this.DistrictIdField.Equals(value) != true)) {
+                    this.DistrictIdField = value;
+                    this.RaisePropertyChanged("DistrictId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ProvinceId {
+            get {
+                return this.ProvinceIdField;
+            }
+            set {
+                if ((this.ProvinceIdField.Equals(value) != true)) {
+                    this.ProvinceIdField = value;
+                    this.RaisePropertyChanged("ProvinceId");
                 }
             }
         }
@@ -580,6 +689,9 @@ namespace Sistema_PANI.Adoption {
         private string IDKidField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private Sistema_PANI.Adoption.MarriageInformationDTO MarriageInformationField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -636,6 +748,19 @@ namespace Sistema_PANI.Adoption {
                 if ((object.ReferenceEquals(this.IDKidField, value) != true)) {
                     this.IDKidField = value;
                     this.RaisePropertyChanged("IDKid");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
                 }
             }
         }
@@ -712,6 +837,9 @@ namespace Sistema_PANI.Adoption {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Sistema_PANI.Adoption.AddressDTO AddressField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private Sistema_PANI.Adoption.PersonDTO FatherField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -736,6 +864,19 @@ namespace Sistema_PANI.Adoption {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Sistema_PANI.Adoption.AddressDTO Address {
+            get {
+                return this.AddressField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AddressField, value) != true)) {
+                    this.AddressField = value;
+                    this.RaisePropertyChanged("Address");
+                }
             }
         }
         
@@ -874,6 +1015,99 @@ namespace Sistema_PANI.Adoption {
                 if ((this.IdField.Equals(value) != true)) {
                     this.IdField = value;
                     this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="AddressDTO", Namespace="http://schemas.datacontract.org/2004/07/Adoption.Contract.DataContract")]
+    [System.SerializableAttribute()]
+    public partial class AddressDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Sistema_PANI.Adoption.KeyValuePairDTO CountyField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Sistema_PANI.Adoption.KeyValuePairDTO DistrictField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Sistema_PANI.Adoption.KeyValuePairDTO ProvinceField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Sistema_PANI.Adoption.KeyValuePairDTO County {
+            get {
+                return this.CountyField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CountyField, value) != true)) {
+                    this.CountyField = value;
+                    this.RaisePropertyChanged("County");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Description {
+            get {
+                return this.DescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
+                    this.DescriptionField = value;
+                    this.RaisePropertyChanged("Description");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Sistema_PANI.Adoption.KeyValuePairDTO District {
+            get {
+                return this.DistrictField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DistrictField, value) != true)) {
+                    this.DistrictField = value;
+                    this.RaisePropertyChanged("District");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Sistema_PANI.Adoption.KeyValuePairDTO Province {
+            get {
+                return this.ProvinceField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ProvinceField, value) != true)) {
+                    this.ProvinceField = value;
+                    this.RaisePropertyChanged("Province");
                 }
             }
         }
@@ -1230,39 +1464,11 @@ namespace Sistema_PANI.Adoption {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdoptionServices/GetadoptionProcess", ReplyAction="http://tempuri.org/IAdoptionServices/GetadoptionProcessResponse")]
         System.Threading.Tasks.Task<Sistema_PANI.Adoption.AdoptionRequestDTO> GetadoptionProcessAsync(int id);
         
-        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de contenedor (GetAdoptionProcess) del mensaje GetAdoptionProcessRequest no coincide con el valor predeterminado (GetAdoptionProcess1)
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdoptionServices/GetAdoptionProcess", ReplyAction="http://tempuri.org/IAdoptionServices/GetAdoptionProcessResponse")]
-        Sistema_PANI.Adoption.GetAdoptionProcessResponse GetAdoptionProcess1(Sistema_PANI.Adoption.GetAdoptionProcessRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdoptionServices/GetAllAdoptionProcess", ReplyAction="http://tempuri.org/IAdoptionServices/GetAllAdoptionProcessResponse")]
+        Sistema_PANI.Adoption.AdoptionRequestDTO[] GetAllAdoptionProcess();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdoptionServices/GetAdoptionProcess", ReplyAction="http://tempuri.org/IAdoptionServices/GetAdoptionProcessResponse")]
-        System.Threading.Tasks.Task<Sistema_PANI.Adoption.GetAdoptionProcessResponse> GetAdoptionProcess1Async(Sistema_PANI.Adoption.GetAdoptionProcessRequest request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetAdoptionProcess", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
-    public partial class GetAdoptionProcessRequest {
-        
-        public GetAdoptionProcessRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="GetAdoptionProcessResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
-    public partial class GetAdoptionProcessResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
-        public Sistema_PANI.Adoption.AdoptionRequestDTO[] GetAdoptionProcessResult;
-        
-        public GetAdoptionProcessResponse() {
-        }
-        
-        public GetAdoptionProcessResponse(Sistema_PANI.Adoption.AdoptionRequestDTO[] GetAdoptionProcessResult) {
-            this.GetAdoptionProcessResult = GetAdoptionProcessResult;
-        }
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAdoptionServices/GetAllAdoptionProcess", ReplyAction="http://tempuri.org/IAdoptionServices/GetAllAdoptionProcessResponse")]
+        System.Threading.Tasks.Task<Sistema_PANI.Adoption.AdoptionRequestDTO[]> GetAllAdoptionProcessAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1324,25 +1530,12 @@ namespace Sistema_PANI.Adoption {
             return base.Channel.GetadoptionProcessAsync(id);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Sistema_PANI.Adoption.GetAdoptionProcessResponse Sistema_PANI.Adoption.IAdoptionServices.GetAdoptionProcess1(Sistema_PANI.Adoption.GetAdoptionProcessRequest request) {
-            return base.Channel.GetAdoptionProcess1(request);
+        public Sistema_PANI.Adoption.AdoptionRequestDTO[] GetAllAdoptionProcess() {
+            return base.Channel.GetAllAdoptionProcess();
         }
         
-        public Sistema_PANI.Adoption.AdoptionRequestDTO[] GetAdoptionProcess1() {
-            Sistema_PANI.Adoption.GetAdoptionProcessRequest inValue = new Sistema_PANI.Adoption.GetAdoptionProcessRequest();
-            Sistema_PANI.Adoption.GetAdoptionProcessResponse retVal = ((Sistema_PANI.Adoption.IAdoptionServices)(this)).GetAdoptionProcess1(inValue);
-            return retVal.GetAdoptionProcessResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Sistema_PANI.Adoption.GetAdoptionProcessResponse> Sistema_PANI.Adoption.IAdoptionServices.GetAdoptionProcess1Async(Sistema_PANI.Adoption.GetAdoptionProcessRequest request) {
-            return base.Channel.GetAdoptionProcess1Async(request);
-        }
-        
-        public System.Threading.Tasks.Task<Sistema_PANI.Adoption.GetAdoptionProcessResponse> GetAdoptionProcess1Async() {
-            Sistema_PANI.Adoption.GetAdoptionProcessRequest inValue = new Sistema_PANI.Adoption.GetAdoptionProcessRequest();
-            return ((Sistema_PANI.Adoption.IAdoptionServices)(this)).GetAdoptionProcess1Async(inValue);
+        public System.Threading.Tasks.Task<Sistema_PANI.Adoption.AdoptionRequestDTO[]> GetAllAdoptionProcessAsync() {
+            return base.Channel.GetAllAdoptionProcessAsync();
         }
     }
 }

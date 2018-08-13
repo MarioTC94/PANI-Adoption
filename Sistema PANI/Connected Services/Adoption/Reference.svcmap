@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9955ecf2-7a8c-4393-ba49-67f0f68f09d3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="3eeaad0f-769f-4b45-8b6f-189305ca6ed1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,14 +19,13 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://adoptionservice.azurewebsites.net/Contract/AdoptionsServices.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address=" http://localhost:1307/Contract/AdoptionsServices.svc?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="AdoptionsServices.disco" MetadataType="Disco" ID="041bc350-1bf9-41b3-b732-3e7fb0e269d0" SourceId="1" SourceUrl="http://adoptionservice.azurewebsites.net/Contract/AdoptionsServices.svc?disco" />
-    <MetadataFile FileName="AdoptionsServices.xsd" MetadataType="Schema" ID="798f9c2f-855e-4f05-a310-20226326b803" SourceId="1" SourceUrl="http://adoptionservice.azurewebsites.net/Contract/AdoptionsServices.svc?xsd=xsd0" />
-    <MetadataFile FileName="AdoptionsServices.wsdl" MetadataType="Wsdl" ID="230ba049-ffd3-479d-86ae-663b188764e0" SourceId="1" SourceUrl="http://adoptionservice.azurewebsites.net/Contract/AdoptionsServices.svc?wsdl" />
-    <MetadataFile FileName="AdoptionsServices1.xsd" MetadataType="Schema" ID="110127e1-91c6-412c-85f8-57d608deee9f" SourceId="1" SourceUrl="http://adoptionservice.azurewebsites.net/Contract/AdoptionsServices.svc?xsd=xsd2" />
-    <MetadataFile FileName="AdoptionsServices2.xsd" MetadataType="Schema" ID="4a3491a5-cc9d-4593-9b22-349fd9e1714b" SourceId="1" SourceUrl="http://adoptionservice.azurewebsites.net/Contract/AdoptionsServices.svc?xsd=xsd1" />
+    <MetadataFile FileName="AdoptionsServices.wsdl" MetadataType="Wsdl" ID="aa211845-3cbf-4be1-b4d9-a508585a5359" SourceId="1" SourceUrl="http://localhost:1307/Contract/AdoptionsServices.svc?wsdl" />
+    <MetadataFile FileName="AdoptionsServices.xsd" MetadataType="Schema" ID="b7042a1e-bdb3-42a8-82d1-e5373eb05e83" SourceId="1" SourceUrl="http://localhost:1307/Contract/AdoptionsServices.svc?xsd=xsd2" />
+    <MetadataFile FileName="AdoptionsServices1.xsd" MetadataType="Schema" ID="0142a7a2-cd3b-42a5-be1e-28eefb4ebf98" SourceId="1" SourceUrl="http://localhost:1307/Contract/AdoptionsServices.svc?xsd=xsd1" />
+    <MetadataFile FileName="AdoptionsServices2.xsd" MetadataType="Schema" ID="3a3002b1-3c6c-461d-8114-911a492383c5" SourceId="1" SourceUrl="http://localhost:1307/Contract/AdoptionsServices.svc?xsd=xsd0" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

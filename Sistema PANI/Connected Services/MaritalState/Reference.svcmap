@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="100127a0-7fc1-4ea3-a23b-e8ba9641ed72" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="48330296-870b-40b1-a790-b5a7fc35be0c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,10 +22,10 @@
     <MetadataSource Address="http://adoptionservice.azurewebsites.net/Contract/MaritalStateServices.svc?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="MaritalStateServices.xsd" MetadataType="Schema" ID="a967d851-ace5-4985-859c-5272537caf6e" SourceId="1" SourceUrl="http://adoptionservice.azurewebsites.net/Contract/MaritalStateServices.svc?xsd=xsd0" />
-    <MetadataFile FileName="MaritalStateServices.wsdl" MetadataType="Wsdl" ID="78519717-8534-4b3a-9c93-91f7d0149410" SourceId="1" SourceUrl="http://adoptionservice.azurewebsites.net/Contract/MaritalStateServices.svc?wsdl" />
-    <MetadataFile FileName="MaritalStateServices1.xsd" MetadataType="Schema" ID="1520482b-81e6-4a7f-b9db-69874a24ce55" SourceId="1" SourceUrl="http://adoptionservice.azurewebsites.net/Contract/MaritalStateServices.svc?xsd=xsd2" />
-    <MetadataFile FileName="MaritalStateServices2.xsd" MetadataType="Schema" ID="39495a80-4b91-486b-9977-162463f88118" SourceId="1" SourceUrl="http://adoptionservice.azurewebsites.net/Contract/MaritalStateServices.svc?xsd=xsd1" />
+    <MetadataFile FileName="MaritalStateServices.xsd" MetadataType="Schema" ID="2bc63c3f-38d1-4fc8-b298-9019502dbc3d" SourceId="1" SourceUrl="http://adoptionservice.azurewebsites.net/Contract/MaritalStateServices.svc?xsd=xsd0" />
+    <MetadataFile FileName="MaritalStateServices.wsdl" MetadataType="Wsdl" ID="9f76cd88-d45d-4a81-8059-235d708b27ed" SourceId="1" SourceUrl="http://adoptionservice.azurewebsites.net/Contract/MaritalStateServices.svc?wsdl" />
+    <MetadataFile FileName="MaritalStateServices1.xsd" MetadataType="Schema" ID="46454a5c-e9df-4c93-ba69-103a7aae44eb" SourceId="1" SourceUrl="http://adoptionservice.azurewebsites.net/Contract/MaritalStateServices.svc?xsd=xsd2" />
+    <MetadataFile FileName="MaritalStateServices2.xsd" MetadataType="Schema" ID="1f5beaba-b3bd-4096-9706-24767f28ab4d" SourceId="1" SourceUrl="http://adoptionservice.azurewebsites.net/Contract/MaritalStateServices.svc?xsd=xsd1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

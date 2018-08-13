@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="334f6703-1ee8-4506-8094-4e5622f83bb3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b02280ba-896c-4f54-b768-f3f3096d0f13" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,10 +22,10 @@
     <MetadataSource Address="http://adoptionservice.azurewebsites.net/Contract/RoomHouseServices.svc?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="RoomHouseServices.xsd" MetadataType="Schema" ID="1e92730d-7230-4a25-92f6-59080887cecc" SourceId="1" SourceUrl="http://adoptionservice.azurewebsites.net/Contract/RoomHouseServices.svc?xsd=xsd1" />
-    <MetadataFile FileName="RoomHouseServices1.xsd" MetadataType="Schema" ID="b8096e11-0359-4db8-9d9f-df459344c29b" SourceId="1" SourceUrl="http://adoptionservice.azurewebsites.net/Contract/RoomHouseServices.svc?xsd=xsd0" />
-    <MetadataFile FileName="RoomHouseServices2.xsd" MetadataType="Schema" ID="0b9e04cd-3e43-439f-935e-e0cfcd406bf4" SourceId="1" SourceUrl="http://adoptionservice.azurewebsites.net/Contract/RoomHouseServices.svc?xsd=xsd2" />
-    <MetadataFile FileName="RoomHouseServices.wsdl" MetadataType="Wsdl" ID="c37610ba-4fc4-4287-a020-fea4251dd8dd" SourceId="1" SourceUrl="http://adoptionservice.azurewebsites.net/Contract/RoomHouseServices.svc?wsdl" />
+    <MetadataFile FileName="RoomHouseServices.xsd" MetadataType="Schema" ID="dfffcf96-cf12-4393-b64f-2013c276fc05" SourceId="1" SourceUrl="http://adoptionservice.azurewebsites.net/Contract/RoomHouseServices.svc?xsd=xsd1" />
+    <MetadataFile FileName="RoomHouseServices1.xsd" MetadataType="Schema" ID="d69f9225-99b5-42d2-a334-0444a464fc72" SourceId="1" SourceUrl="http://adoptionservice.azurewebsites.net/Contract/RoomHouseServices.svc?xsd=xsd0" />
+    <MetadataFile FileName="RoomHouseServices2.xsd" MetadataType="Schema" ID="b2c1ea8c-0376-4329-9754-5030969c42a4" SourceId="1" SourceUrl="http://adoptionservice.azurewebsites.net/Contract/RoomHouseServices.svc?xsd=xsd2" />
+    <MetadataFile FileName="RoomHouseServices.wsdl" MetadataType="Wsdl" ID="c5df1ac7-449e-491a-bc98-2d7b052ddbb1" SourceId="1" SourceUrl="http://adoptionservice.azurewebsites.net/Contract/RoomHouseServices.svc?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

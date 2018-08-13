@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="49f9565b-7453-45d1-9996-d474eeacca82" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e426c5df-c3f1-4343-bb70-bc17a23c256b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,10 +22,10 @@
     <MetadataSource Address="http://adoptionservice.azurewebsites.net/Contract/WorkerTypeServices.svc?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="WorkerTypeServices.wsdl" MetadataType="Wsdl" ID="5496a3c1-e075-45ee-9c34-8abc320b0a0e" SourceId="1" SourceUrl="http://adoptionservice.azurewebsites.net/Contract/WorkerTypeServices.svc?wsdl" />
-    <MetadataFile FileName="WorkerTypeServices.xsd" MetadataType="Schema" ID="86743f88-c248-4c74-b944-44e321d511bf" SourceId="1" SourceUrl="http://adoptionservice.azurewebsites.net/Contract/WorkerTypeServices.svc?xsd=xsd2" />
-    <MetadataFile FileName="WorkerTypeServices1.xsd" MetadataType="Schema" ID="410cbf3b-8633-4ae8-85c4-0cdc429b9700" SourceId="1" SourceUrl="http://adoptionservice.azurewebsites.net/Contract/WorkerTypeServices.svc?xsd=xsd1" />
-    <MetadataFile FileName="WorkerTypeServices2.xsd" MetadataType="Schema" ID="1f94f01a-16c2-4d5c-bff1-6c4c77254aa4" SourceId="1" SourceUrl="http://adoptionservice.azurewebsites.net/Contract/WorkerTypeServices.svc?xsd=xsd0" />
+    <MetadataFile FileName="WorkerTypeServices.wsdl" MetadataType="Wsdl" ID="f313c343-665b-46d8-ba8c-6c4b9a9c2d5f" SourceId="1" SourceUrl="http://adoptionservice.azurewebsites.net/Contract/WorkerTypeServices.svc?wsdl" />
+    <MetadataFile FileName="WorkerTypeServices.xsd" MetadataType="Schema" ID="3433e45d-c80d-48e0-ad8b-4c34c0f548f8" SourceId="1" SourceUrl="http://adoptionservice.azurewebsites.net/Contract/WorkerTypeServices.svc?xsd=xsd2" />
+    <MetadataFile FileName="WorkerTypeServices1.xsd" MetadataType="Schema" ID="02ccf661-73ee-4e03-9846-45ed365cd5fe" SourceId="1" SourceUrl="http://adoptionservice.azurewebsites.net/Contract/WorkerTypeServices.svc?xsd=xsd1" />
+    <MetadataFile FileName="WorkerTypeServices2.xsd" MetadataType="Schema" ID="440796aa-884f-44b7-973f-17588b0c169d" SourceId="1" SourceUrl="http://adoptionservice.azurewebsites.net/Contract/WorkerTypeServices.svc?xsd=xsd0" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

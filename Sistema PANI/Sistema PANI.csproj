@@ -66,6 +66,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\Auth\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\MaritalState\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -86,21 +91,40 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Presenter\IMenuPresenter.cs" />
-    <Compile Include="Presenter\MenuPresenter.cs" />
-    <Compile Include="Presenter\RoomHousesServicesClient.cs" />
-    <Compile Include="View\IMenuView.cs" />
+    <Compile Include="MenuAdoption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuAdoption.Designer.cs">
+      <DependentUpon>MenuAdoption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presenter\IAddAdoptionProccessPresenter.cs" />
+    <Compile Include="Presenter\AddAdoptionProccessPresenter.cs" />
+    <Compile Include="Presenter\IMenuAdoptionPresenter.cs" />
+    <Compile Include="Presenter\IReportAdoptionPresenter.cs" />
+    <Compile Include="Presenter\IUserLoginPresenter.cs" />
+    <Compile Include="Presenter\IUserRegisterPresenter.cs" />
+    <Compile Include="Presenter\MenuAdoptionPresenter.cs" />
+    <Compile Include="Presenter\ReportAdoptionPresenter.cs" />
+    <Compile Include="Presenter\UserLoginPresenter.cs" />
+    <Compile Include="Presenter\UserRegisterPresenter.cs" />
+    <Compile Include="ReportAdoptionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportAdoptionForm.Designer.cs">
+      <DependentUpon>ReportAdoptionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\IAddAdoptionProcessView.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu.cs">
+    <Compile Include="AddAdoptionProcessForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu.Designer.cs">
-      <DependentUpon>Menu.cs</DependentUpon>
+    <Compile Include="AddAdoptionProcessForm.Designer.cs">
+      <DependentUpon>AddAdoptionProcessForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -110,11 +134,18 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\IReportAdoptionView.cs" />
+    <Compile Include="View\IUserLoginView.cs" />
+    <Compile Include="View\IUserRegisterView.cs" />
+    <Compile Include="View\MenuAdoptionView.cs" />
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu.resx">
-      <DependentUpon>Menu.cs</DependentUpon>
+    <EmbeddedResource Include="AddAdoptionProcessForm.resx">
+      <DependentUpon>AddAdoptionProcessForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuAdoption.resx">
+      <DependentUpon>MenuAdoption.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -128,6 +159,9 @@
     </Compile>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportAdoptionForm.resx">
+      <DependentUpon>ReportAdoptionForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Connected Services\Address\AddressServices.wsdl" />
     <None Include="Connected Services\Address\AddressServices.xsd">
@@ -155,8 +189,18 @@
     <None Include="Connected Services\Adoption\Sistema_PANI.Adoption.AdoptionRequestDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\Adoption\Sistema_PANI.Adoption.GetAdoptionProcessResponse.datasource">
+    <None Include="Connected Services\Auth\Sistema_PANI.Auth.UserDTO.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Auth\UserServices.wsdl" />
+    <None Include="Connected Services\Auth\UserServices.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\Auth\UserServices1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\Auth\UserServices2.xsd">
+      <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\MaritalState\MaritalStateServices.wsdl" />
     <None Include="Connected Services\MaritalState\MaritalStateServices.xsd">
@@ -233,25 +277,11 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\Address\" />
     <WCFMetadataStorage Include="Connected Services\Adoption\" />
+    <WCFMetadataStorage Include="Connected Services\Auth\" />
     <WCFMetadataStorage Include="Connected Services\MaritalState\" />
     <WCFMetadataStorage Include="Connected Services\RoomHouse\" />
     <WCFMetadataStorage Include="Connected Services\StateFile\" />
     <WCFMetadataStorage Include="Connected Services\WorkerType\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\Adoption\AdoptionsServices.disco" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\Adoption\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\Adoption\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\Adoption\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\Address\configuration91.svcinfo" />
@@ -278,6 +308,18 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\RoomHouse\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\RoomHouse\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\RoomHouse\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Connected Services\StateFile\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
@@ -285,6 +327,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\StateFile\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Auth\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Auth\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Auth\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -302,13 +356,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\RoomHouse\configuration91.svcinfo" />
+    <None Include="Connected Services\Adoption\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\RoomHouse\configuration.svcinfo" />
+    <None Include="Connected Services\Adoption\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\RoomHouse\Reference.svcmap">
+    <None Include="Connected Services\Adoption\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
